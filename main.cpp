@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
     a.installTranslator(&qtTranslator);
 
     QTranslator myappTranslator;
-    QString f="/usr/share/kencfs/translations/kencfs_" + QLocale::system().name();
+    QString f= QString(KENCFS_TRANSLATIONS) + QString("/kencfs_") + QLocale::system().name();
     if (QFile::exists("./kencfs_" + QLocale::system().name())) f="./kencfs_" + QLocale::system().name();
     myappTranslator.load(f);
     a.installTranslator(&myappTranslator);

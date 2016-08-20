@@ -66,7 +66,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->action_Quit, SIGNAL(triggered()), qApp, SLOT(quit()));
 
     //QIcon qi(QIcon::fromTheme("document-encrypt"));
-    QIcon qi(QIcon("/usr/share/icons/kencfs/kencfs-icon.png"));
+    QIcon qi(QIcon(QString(KENCFS_ICONS) + QString("/kencfs-icon.png")));
     this->setWindowIcon(qi);
     
     tray = new  KStatusNotifierItem("kencfs");

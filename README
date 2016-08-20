@@ -35,9 +35,9 @@ $> sudo make install
 Note: the automatic installation is done in the following directories:
 
 /usr/bin/ for KEncFS itself
-/usr/share/doc/kencfs-1.1 for this README
-/usr/share/kencfs/translations for .qm files of languages
-/usr/share/applications/ for kencfs.desktop file
+/usr/share/doc/kencfs-2.0.0 for this README
+/usr/share/kencfs-2.0.0/translations for .qm files of languages
+/usr/share/applications/ for kencfs-2.0.0.desktop file
 
 If you want to change some of those path, adjust qmake kencfs.pro file.
 

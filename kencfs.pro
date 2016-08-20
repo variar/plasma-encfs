@@ -34,3 +34,6 @@ icon.files = kencfs-icon.png
 #INSTALLS += target data desktop
 INSTALLS += target data doc desktop icon
 CONFIG += release
+
+DEFINES += KENCFS_TRANSLATIONS='\\"$${data.path}\\"'
+DEFINES += KENCFS_ICONS='\\"$${icon.path}\\"'
