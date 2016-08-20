@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=KEncFS
+Exec=kencfs
+Icon=kencfs/kencfs-icon
+Categories=System;Security
+Terminal=false
+Type=Application
+StartupNotify=false
+Comment=Easy manager for encrypted filesystem
+Comment[cs]=Jednoduchý správce zašifrovaných souborových systémů
+Comment[it]=Facile programma di gesione di filesystem criptati
+Comment[ro]=Manager facil pentru sisteme de fișiere criptate
+GenericName=Encrypted FileSystem manager
+GenericName[cs]=Správce zašifrovaných souborových systémů
+GenericName[it]=Manager di FileSystem Criptati
+GenericName[ro]=Manager pentru sisteme de fișiere criptate

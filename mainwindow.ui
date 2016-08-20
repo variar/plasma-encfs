@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>642</width>
+    <height>402</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">KEncFS</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Encrypted FileSystem</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTreeView" name="tv">
+            <property name="contextMenuPolicy">
+             <enum>Qt::ActionsContextMenu</enum>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <property name="rootIsDecorated">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QPushButton" name="pbadd">
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>&amp;Add</string>
+              </property>
+              <property name="default">
+               <bool>true</bool>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pbrem">
+              <property name="text">
+               <string>&amp;Remove</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pbmount">
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="text">
+             <string>&amp;Mount</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pbumount">
+            <property name="text">
+             <string>&amp;Umount</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pbbrowse">
+            <property name="text">
+             <string>&amp;Browse</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pbhide">
+            <property name="text">
+             <string>&amp;Hide</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pbexit">
+            <property name="text">
+             <string>&amp;Exit</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>642</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Hide">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Hide / Show</string>
+   </property>
+   <property name="toolTip">
+    <string>Hide / Show</string>
+   </property>
+  </action>
+  <action name="action_Configura">
+   <property name="text">
+    <string>&amp;Config</string>
+   </property>
+   <property name="toolTip">
+    <string>Config</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+   <property name="toolTip">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+   <property name="toolTip">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>action_Hide</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>toggleHideShow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbadd</sender>
+   <signal>released()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pbadd_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>590</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbexit</sender>
+   <signal>released()</signal>
+   <receiver>action_Quit</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>590</x>
+     <y>362</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbhide</sender>
+   <signal>released()</signal>
+   <receiver>action_Hide</receiver>
+   <slot>trigger()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>589</x>
+     <y>334</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbrem</sender>
+   <signal>released()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pbrem_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>589</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbmount</sender>
+   <signal>released()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pbmount_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>589</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbumount</sender>
+   <signal>released()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pbumount_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>589</x>
+     <y>220</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_About</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showabout()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Configura</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showconfig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbbrowse</sender>
+   <signal>released()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pbbrowse_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>593</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>320</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>toggleHideShow()</slot>
+  <slot>pbadd_click()</slot>
+  <slot>pbrem_click()</slot>
+  <slot>pbmount_click()</slot>
+  <slot>pbumount_click()</slot>
+  <slot>showabout()</slot>
+  <slot>showconfig()</slot>
+  <slot>pbbrowse_click()</slot>
+ </slots>
+</ui>
