@@ -26,7 +26,7 @@ INSTALL
 ===========
 Open a konsole into source dir and write
 
-$> qmake-qt4
+$> qmake
 $> make
 $> sudo make install
 
@@ -34,7 +34,7 @@ Note: the automatic installation is done in the following directories:
 
 /usr/bin/ for KEncFS itself
 /usr/share/doc/kencfs-1.1 for this README
-/usr/share/kde4/apps/kencfs/translations for .qm files of languages
+/usr/share/kencfs/translations for .qm files of languages
 /usr/share/applications/ for kencfs.desktop file
 
 If you want to change some of those path, adjust qmake kencfs.pro file.
@@ -62,6 +62,7 @@ Changelog
 13 may 2015             version 1.5.0    - KencFS works in KDE4 and in KdePlasma5.
 10 apr 2016             version 1.6.1    - fixed unnecessary opening kwallet if the option is not configured.
 10 apr 2016             version 1.6.2    - removed unused toolbar from mainwindow; changed icon for application with standard plasma-breeze lock icon
+20 aug 2016             version 2.0.0    - ported to KDE Frameworks 5 and Qt 5
 
 
 Thanks
@@ -70,6 +71,7 @@ Nicolai Beuermann for KDEWallet support idea
 Arthur Țițeică for Romanian translations
 Miloš Kožina for Czech translations
 Hennings Kopf for automount via KDEWallet idea
+Anton Filimonov for porting to KDE Frameworks 5 and Qt 5
 
 
 Donations

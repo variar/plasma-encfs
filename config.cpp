@@ -14,8 +14,8 @@
 **/
 
 #include "config.h"
-#include <kconfig.h>
-#include <kconfiggroup.h>
+#include <KConfig>
+#include <KConfigGroup>
 
 extern char *cfgfile;
 extern bool starthide, browseaftermount,usewallet,wallet_automount;

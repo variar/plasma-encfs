@@ -13,10 +13,10 @@
 **
 **/
 
-#include <QtGui>
+#include <QtWidgets>
 #include "mainwindow.h"
 #include "fsdialog.h"
-#include "qtsingleapplication.h"
+#include <QtSolutions/QtSingleApplication>
 #include "configdialog.h"
 
 fsDialog *fsw;
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
     a.installTranslator(&qtTranslator);
 
     QTranslator myappTranslator;
-    QString f="/usr/share/kde4/apps/kencfs/translations/kencfs_" + QLocale::system().name();
+    QString f="/usr/share/kencfs/translations/kencfs_" + QLocale::system().name();
     if (QFile::exists("./kencfs_" + QLocale::system().name())) f="./kencfs_" + QLocale::system().name();
     myappTranslator.load(f);
     a.installTranslator(&myappTranslator);

@@ -21,8 +21,8 @@
 #include <iostream>
 #include <QMessageBox>
 #include "configdialog.h"
-#include <kstatusnotifieritem.h>
-#include <QtGui/QMenuBar>
+#include <KStatusNotifierItem>
+#include <QtWidgets/QMenuBar>
 
 
 using namespace std;
@@ -342,17 +342,17 @@ void MainWindow::addmenu()
     for (j=0; j<model->rowCount(); j++)
     {
         QAction *a=f->addAction(model->item(j,0)->text());
-        a->setCheckable(TRUE);
-        if (model->item(j,3)->text().length()) a->setChecked(TRUE);
-        else a->setChecked(FALSE);
+        a->setCheckable(true);
+        if (model->item(j,3)->text().length()) a->setChecked(true);
+        else a->setChecked(false);
         QAction *a2=f2->addAction(model->item(j,0)->text());
-        a2->setCheckable(TRUE);
-        if (model->item(j,3)->text().length()) a2->setChecked(TRUE);
-        else a2->setChecked(FALSE);
+        a2->setCheckable(false);
+        if (model->item(j,3)->text().length()) a2->setChecked(true);
+        else a2->setChecked(false);
     }
     connect(f,SIGNAL(triggered(QAction *)),this,SLOT(fs_toggled(QAction *)));
     connect(f2,SIGNAL(triggered(QAction *)),this,SLOT(fs_toggled(QAction *)));
-    tray->setContextMenu((KMenu *) f2);
+    tray->setContextMenu(f2);
 
 }
 

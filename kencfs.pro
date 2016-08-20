@@ -7,31 +7,23 @@ SOURCES += main.cpp \
     mainwindow.cpp \
     fsDialog.cpp \
     config.cpp \
-    qtsingleapplication.cpp \
-    qtlocalpeer.cpp \
-    qtlockedfile.cpp \
     configdialog.cpp
 HEADERS += mainwindow.h \
     fsdialog.h \
     config.h \
-    qtsingleapplication.h \
-    qtlocalpeer.h \
-    qtlockedfile.h \
     configdialog.h
 FORMS += mainwindow.ui \
     fsdialog.ui \
     configdialog.ui
-OTHER_FILES += 
-LIBS += -lkdeui -lkdecore -lQtNetwork
+
 TRANSLATIONS = kencfs_it.ts kencfs_ro.ts kencfs_cs_CZ.ts
 
-#fedora
-INCLUDEPATH += "/usr/include/kde4"
-LIBS += -L/usr/lib64/kde4/devel
+QT += widgets KWallet KConfigCore KNotifications
+CONFIG += qtsingleapplication
 
 # install
 target.path = /usr/bin/
-data.path = /usr/share/kde4/apps/kencfs/translations/
+data.path = /usr/share/kencfs/translations/
 data.files = *.qm
 doc.path = /usr/share/doc/kencfs
 doc.files = README preview.png preview2.png

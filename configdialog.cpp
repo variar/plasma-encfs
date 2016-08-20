@@ -21,7 +21,7 @@ using namespace std;
 
 
 extern bool starthide,browseaftermount,usewallet,wallet_automount;
-#include <KDE/KWallet/Wallet>
+#include <KWallet>
 using KWallet::Wallet;
 extern Wallet *m_wallet;
 extern QString WalletFolder;
