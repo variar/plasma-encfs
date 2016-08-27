@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>409</width>
+    <width>446</width>
     <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>KEncFs - Add FileSystem</string>
+   <string>Plasma-EncFS - Add FileSystem</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">

@@ -46,7 +46,7 @@ void configDialog::accept()
     usewallet=configui->cbusewallet->isChecked();
     wallet_automount=configui->cbwallet_automount->isChecked();
     if (!usewallet && wallet_opened) {
-        cout << "NOT USEWALLET, remove wallet folder for Kencfs\n";
+        cout << "NOT USEWALLET, remove wallet folder for Plasma-EncFS\n";
         m_wallet->removeFolder(WalletFolder);
     }
     this->hide();

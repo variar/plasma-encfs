@@ -26,14 +26,15 @@
 
 
 using namespace std;
-const char *prgname="KEncFS";
+const char *prgname="Plasma-EncFs";
 QString description;
-const char *cfgfile="kencfsrc";
-const char *author="Felice Murolo - Salerno - Italia";
-const char *email="linuxboy@fel.hopto.org";
-const char *copyright="(c) 2010-2016";
+const char *cfgfile="plasmaencfsrc";
+const char *author="Anton.Filimonov@gmail.com";
+const char *email="anton.filimonov@gmail.com";
+const char *copyright="(c) 2016";
 const char *license="LGPL";
-const char *version="1.6.2";
+const char *version="0.0.1";
+
 bool starthide=false;
 bool browseaftermount=true;
 bool usewallet=false;
@@ -69,7 +70,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QIcon qi(QIcon(QString(KENCFS_ICONS) + QString("/kencfs-icon.png")));
     this->setWindowIcon(qi);
     
-    tray = new  KStatusNotifierItem("kencfs");
+    tray = new  KStatusNotifierItem("plasma-encfs");
     tray->setCategory(KStatusNotifierItem::SystemServices);
     tray->setIconByPixmap(qi);
     tray->setStatus(KStatusNotifierItem::Active);
@@ -439,8 +440,8 @@ void MainWindow::showabout()
 {
     QString a=prgname;
     a=a+" v"+version+"\n"+copyright+" by "+author+"\n"+"eMail: "+email+"\n"+"License: "+license+"\n\n";
-    QMessageBox::about(this,"About KEncFS",a);
-    QMessageBox::about(this,tr("Donations"),tr("Please, consider to make a <a href='http://kde-apps.org/content/donate.php?content=134003'>Donation</a> for my work.\nIf you like this application, please donate something.\nAll money raised will be donated to charity for meritorious initiatives.\n\n"));
+    QMessageBox::about(this,"About Plasma-EncFS",a);
+    //QMessageBox::about(this,tr("Donations"),tr("Please, consider to make a <a href='http://kde-apps.org/content/donate.php?content=134003'>Donation</a> for my work.\nIf you like this application, please donate something.\nAll money raised will be donated to charity for meritorious initiatives.\n\n"));
 }
 
 void MainWindow::showconfig()

@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=KEncFS
-Exec=kencfs
-Icon=kencfs/kencfs-icon
+Name=Plasma-EncFS
+Exec=plasma-encfs
+Icon=plasma-encfs/kencfs-icon
 Categories=System;Security
 Terminal=false
 Type=Application
