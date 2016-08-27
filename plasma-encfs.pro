@@ -1,7 +1,4 @@
-# -------------------------------------------------
-# Project created by QtCreator 2010-08-22T10:38:43
-# -------------------------------------------------
-TARGET = kencfs
+TARGET = plasma-encfs
 TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
@@ -23,13 +20,13 @@ CONFIG += qtsingleapplication
 
 # install
 target.path = /usr/bin/
-data.path = /usr/share/kencfs/translations/
+data.path = /usr/share/$${TARGET}/translations/
 data.files = *.qm
-doc.path = /usr/share/doc/kencfs
+doc.path = /usr/share/doc/$${TARGET}
 doc.files = README preview.png preview2.png
 desktop.path = /usr/share/applications
 desktop.files = kencfs.desktop
-icon.path = /usr/share/icons/kencfs
+icon.path = /usr/share/icons/$${TARGET}
 icon.files = kencfs-icon.png
 #INSTALLS += target data desktop
 INSTALLS += target data doc desktop icon
